@@ -1,0 +1,7 @@
+myfile = open('file.txt')
+print(myfile.read())
+myfile.seek(0)
+print(myfile.read())
+myfile.seek(0)
+print(myfile.readlines())
+myfile.close()
