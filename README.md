@@ -1,5 +1,6 @@
-stopped at 09-Objects and Data Structures
+stopped at 02 Module, 07 Assessment Test
 
-https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/00-Python%20Object%20and%20Data%20Structure%20Basics/09-Objects%20and%20Data%20Structures%20Assessment%20Test.ipynb
+https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/02-Python%20Statements/07-Statements%20Assessment%20Test.ipynb
 
-tuples exercise
+Ex: Go through the string below and if the length of a word is even print "even!"
+
