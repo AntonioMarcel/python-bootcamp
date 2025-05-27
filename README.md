@@ -1,3 +1,5 @@
-stopped at 03 Module, 03 Function exercise, just for fun problem
+stopped at 03 Module, 07 args and kwargs, *args and **kwargs combined
 
-https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/03-Methods%20and%20Functions/03-Function%20Practice%20Exercises.ipynb
+still have to review function exercise solutions
+
+https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/03-Methods%20and%20Functions/07-args%20and%20kwargs.ipynb
