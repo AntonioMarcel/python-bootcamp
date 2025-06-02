@@ -1,8 +1,8 @@
-def myfunc(**kwargs):
-    print(kwargs)
-    if 'pineapple' in kwargs:
-        print(f"My favorite fruit is {kwargs['fruit']}")  # review String Formatting and f-strings if this syntax is unfamiliar
+def myfunc(*args, **kwargs):
+    if 'fruit' and 'juice' in kwargs:
+        print(f"I like {' and '.join(args)} and my favorite fruit is {kwargs['fruit']}")
+        print(f"May I have some {kwargs['juice']} juice?")
     else:
-        print("I don't like fruit")
+        pass
         
-myfunc(fruit='pineapple')
+myfunc('eggs','spam',fruit='cherries',juice='orange')
