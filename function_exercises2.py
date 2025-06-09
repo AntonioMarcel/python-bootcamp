@@ -1,8 +1,8 @@
 # Functions and Methods Homework
-## 1
 import math
 import string
 
+## 1
 def vol(rad):
   return 4/3*math.pi*rad**3
 
