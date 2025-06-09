@@ -1,4 +1,5 @@
 stopped at 04 Milestone Project - 1
+have to find a way to check answers and not allow house already with symbol to be updated
 
 stopped at correcting functions_exercises2: stopped Write a Python function to multiply all the numbers in a list.
 
