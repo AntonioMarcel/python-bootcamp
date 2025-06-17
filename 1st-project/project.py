@@ -25,15 +25,20 @@ def get_position():
     return row_input, column_input
 
 def update_board(board, row_input, column_input, symbol_input):
-    board[row_input][column_input] = symbol_input
-    return board
+    if not board[row_input][column_input].strip():
+        board[row_input][column_input] = symbol_input
+        return board
+    else:
+        print("")
+        raise Exception("Invalid position")
 
 def start_game():
     symbol_input = None
 
     while True: 
         symbol_input = input("Choose the symbol for player 1 (O/X): ")
-        if symbol_input.upper() in ["O","X"]: #can i turn this check into try except maybe?
+        symbol_input = symbol_input.upper()
+        if symbol_input in ["O","X"]: #can i turn this check into try except maybe?
             break
         else: 
             print("Invalid input")
@@ -42,33 +47,63 @@ def start_game():
 
 
 
+def game():
+    board = [[" "," "," "],[" "," "," "],[" "," "," "]]
+    turn_number = 0
+    symbol_input = start_game()
 
+    while True:
+        # Draws the board
+        print("")
+        print_board(board)
+        print("")
 
+        # Checks if someone won the game after minimun of three turns
+        if turn_number >= 2:  
+            # Check rows
+            if any("".join(row) in ["OOO", "XXX"] for row in board):
+                print("True")
+                return True
 
-board = [[" "," "," "],[" "," "," "],[" "," "," "]]
-turn_number = 0
-symbol_input = start_game()
+            # Check columns        
+            k = 0
+            while k < len(board[0]):
+                col_string = ""
+                for row in board:
+                    col_string += row[k]
+                if col_string in ["OOO", "XXX"]:
+                    #print(col_string)
+                    print("True")
+                    return True
+                k +=1
 
-while True:
-    print("")
-    print_board(board)
-    print("")
+            # Check diagonals
+            main_diag = "".join([board[0][0],board[1][1], board[2][2]])
+            anti_diag = "".join([board[0][2],board[1][1], board[2][0]])
+            if main_diag in ["OOO","XXX"]:
+                print("True")
+                return True
+            elif anti_diag in ["OOO","XXX"]:
+                print("True")
+                return True
 
-    row_input, column_input = get_position()
-    board = update_board(board, row_input, column_input, symbol_input)
-    turn_number += 1
+        # Gets position inputs and updates the board
+        row_input, column_input = get_position()
+        try:
+            board = update_board(board, row_input, column_input, symbol_input)
+        except Exception as e:
+            print(f"{e}")
+            continue
+    
+        turn_number += 1
 
-    if symbol_input == "O":
-        symbol_input = "X"
-    else:
-        symbol_input = "O"
+        # Changes player symbol
+        if symbol_input == "O":
+            symbol_input = "X"
+        else:
+            symbol_input = "O"
 
-    if turn_number >= 2: #checks if someone won the game after three turns
-        pass
         
-
-
-
-
+game()
 
 
