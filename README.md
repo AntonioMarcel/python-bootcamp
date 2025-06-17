@@ -1,6 +1,5 @@
-stopped at 04 Milestone Project - 1
-ok, so the code is working. last step i think is wrapping the check answers in a func 
+Finished milestone project 1.
 
-stopped at correcting functions_exercises2: stopped Write a Python function to multiply all the numbers in a list.
-
-https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/03-Methods%20and%20Functions/09-Functions%20and%20Methods%20Homework%20-%20Solutions.ipynb
+Now review course answer for it.
+https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/04-Milestone%20Project%20-%201/02-Milestone%20Project%201%20-%20Walkthrough%20Steps%20Workbook.ipynb
+https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/04-Milestone%20Project%20-%201/03-Milestone%20Project%201%20-%20Complete%20Walkthrough%20Solution.ipynb

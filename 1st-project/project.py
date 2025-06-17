@@ -45,7 +45,43 @@ def start_game():
 
     return symbol_input
 
+def check_answers(turn_number, board):
+    # Checks if someone won the game after minimun of three turns
+    if turn_number >= 2:  
+        # Check rows
+        if any("".join(row) in ["OOO", "XXX"] for row in board):
+            print("True")
+            return True
 
+        # Check columns        
+        k = 0
+        while k < len(board[0]):
+            col_string = ""
+            for row in board:
+                col_string += row[k]
+            if col_string in ["OOO", "XXX"]:
+                #print(col_string)
+                print("True")
+                return True
+            k +=1
+
+        # Check diagonals
+        main_diag = "".join([board[0][0],board[1][1], board[2][2]])
+        anti_diag = "".join([board[0][2],board[1][1], board[2][0]])
+        if main_diag in ["OOO","XXX"]:
+            print("True")
+            return True
+        elif anti_diag in ["OOO","XXX"]:
+            print("True")
+            return True
+    
+    # If no answer after last turn, return True and finish the game
+    if turn_number == 9:
+        print("No contest")
+        return True 
+    
+    # If no answer found, return False and continue the game
+    return False
 
 def game():
     board = [[" "," "," "],[" "," "," "],[" "," "," "]]
@@ -58,35 +94,11 @@ def game():
         print_board(board)
         print("")
 
-        # Checks if someone won the game after minimun of three turns
-        if turn_number >= 2:  
-            # Check rows
-            if any("".join(row) in ["OOO", "XXX"] for row in board):
-                print("True")
-                return True
+        is_winner = check_answers(turn_number, board)
 
-            # Check columns        
-            k = 0
-            while k < len(board[0]):
-                col_string = ""
-                for row in board:
-                    col_string += row[k]
-                if col_string in ["OOO", "XXX"]:
-                    #print(col_string)
-                    print("True")
-                    return True
-                k +=1
-
-            # Check diagonals
-            main_diag = "".join([board[0][0],board[1][1], board[2][2]])
-            anti_diag = "".join([board[0][2],board[1][1], board[2][0]])
-            if main_diag in ["OOO","XXX"]:
-                print("True")
-                return True
-            elif anti_diag in ["OOO","XXX"]:
-                print("True")
-                return True
-
+        if is_winner:
+            break
+        
         # Gets position inputs and updates the board
         row_input, column_input = get_position()
         try:
