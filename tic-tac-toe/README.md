@@ -1,0 +1,1 @@
+ok, so the code is working. last step i think is wrapping the check answers in a func 
