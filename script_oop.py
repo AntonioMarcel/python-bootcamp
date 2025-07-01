@@ -1,28 +1,33 @@
-class Desktop:
+#!/usr/bin/python
+# define parent class
+class Parent:        
+   parentAttr = 100
    def __init__(self):
-      self.__max_price = 25000
+      print ("Calling parent constructor")
 
-   def sell(self):
-      return f"Selling Price: {self.__max_price}"
+   def parentMethod(self):
+      print ("Calling parent method")
 
-   def set_max_price(self, price):
-      if price > self.__max_price:
-         self.__max_price = price
+   def setAttr(self, attr):
+      Parent.parentAttr = attr
 
-# Object
-desktopObj = Desktop()
-print(desktopObj.sell()) 
-print("")
+   def getAttr(self):
+      print ("Parent attribute :", Parent.parentAttr)
 
-# modifying the price directly
-desktopObj.__max_price = 55000
-print(desktopObj.__max_price)
-print(desktopObj.sell()) 
-print(desktopObj._Desktop__max_price)  
-print("")
+# define child class
+class Child(Parent): 
+   def __init__(self):
+      print ("Calling child constructor")
 
-# modifying the price using setter function
-desktopObj.set_max_price(35000)
-print(desktopObj.sell())  
-print(desktopObj._Desktop__max_price)  
-print(desktopObj.__max_price)
+   def childMethod(self):
+      print ("Calling child method")
+
+p = Parent()
+c = Child()
+
+p.parentAttr = 500
+print(Parent.parentAttr)
+
+p.setAttr(500)
+c.setAttr(600)
+print(p.parentAttr)
