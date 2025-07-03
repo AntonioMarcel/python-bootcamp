@@ -6,11 +6,13 @@ class Line:
         self.coor1 = coor1
         self.coor2 = coor2
 
+    # Distância entre dois pontos na reta
     def distance(self):
         return math.sqrt(
             (self.coor2[0] - self.coor1[0]) ** 2 + (self.coor2[1] - self.coor1[1]) ** 2
         )
-
+    
+    # Inclinação da reta
     def slope(self):
         return (self.coor2[1] - self.coor1[1]) / (self.coor2[0] - self.coor1[0])
 
