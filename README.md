@@ -9,9 +9,9 @@ https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/05-Object
 # Python oop reference 
 https://docs.python.org/3/tutorial/classes.html
 
-Stopped at Class Attributes
-https://www.tutorialspoint.com/python/python_class_attributes.htm
+Stopped at Python Constructors
+https://www.tutorialspoint.com/python/python_constructors.htm
 
 # Modules and packages reference
-Here is the best source the official docs! https://docs.python.org/3/tutorial/modules.html#packages
-But I really like the info here: https://python4astronomers.github.io/installation/packages.html
+https://docs.python.org/3/tutorial/modules.html#packages
+https://python4astronomers.github.io/installation/packages.html
