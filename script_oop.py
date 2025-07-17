@@ -1,18 +1,19 @@
-class Employee:
-   empCount = 0
-   def __init__(self, name, age):
-      self.__name = name
-      self.__age = age
-      Employee.empCount += 1
-   
-   # creating staticmethod
-   @staticmethod
-   def showcount():
-      print(Employee.empCount)
+class Division:
+    def __init__(self, a, b):
+        print("Division init")
+        super().__init__(a, b)  # Call next in MRO
 
-e1 = Employee("Bhavana", 24)
-e2 = Employee("Rajesh", 26)
-e3 = Employee("John", 27)
+class Modulus:
+    def __init__(self, a, b):
+        print("Modulus init")
+        self.n = a
+        self.d = b
+        super().__init__(a, b)  # Cooperative call to keep the chain
 
-e1.showcount()
-Employee.showcount()
+class DivMod(Division, Modulus):
+    def __init__(self, a, b):
+        print("DivMod init")
+        super().__init__(a, b)  # Start the MRO chain
+
+x = DivMod(10, 3)
+print(DivMod.__mro__)

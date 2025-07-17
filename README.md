@@ -12,8 +12,8 @@ https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/07-Errors
 # Python oop reference 
 https://docs.python.org/3/tutorial/classes.html
 
-Stopped at Python Constructors
-https://www.tutorialspoint.com/python/python_constructors.htm
+Stopped at Python Inheritance
+https://www.tutorialspoint.com/python/python_inheritance.htm
 
 # Modules and packages reference
 https://docs.python.org/3/tutorial/modules.html#packages
