@@ -12,8 +12,8 @@ https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/07-Errors
 # Python oop reference 
 https://docs.python.org/3/tutorial/classes.html
 
-Stopped at Python Inheritance
-https://www.tutorialspoint.com/python/python_inheritance.htm
+Stopped at Python Method Overriding
+https://www.tutorialspoint.com/python/python_method_overriding.htm
 
 # Modules and packages reference
 https://docs.python.org/3/tutorial/modules.html#packages
