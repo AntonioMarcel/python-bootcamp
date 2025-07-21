@@ -1,7 +1,5 @@
 class Card:
-    def __init__(self, suit, value):
+    def __init__(self, suit, number, value):
         self.suit = suit
         self.value = value
-    
-    def compare(self):
-        pass
+        self.number = number
