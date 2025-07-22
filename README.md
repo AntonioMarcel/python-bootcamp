@@ -1,5 +1,6 @@
 # Course progression
 Milestone Project 2 - War Game 
+Card, Deck, Player, Game classes and some corresponding methods done. Now doing comparing cards logic.  
 https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/08-Milestone%20Project%20-%202/00-Milestone-2-Warmup-Project.ipynb
 
 # Review anwsers
