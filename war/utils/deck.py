@@ -11,10 +11,11 @@ class Deck:
         values = [2,3,4,5,6,7,8,9,10,11,12,13,14]
         suits = ["♠", "♥", "♦", "♣"]
         for k, suit in enumerate(suits):         
-            card = {}
             for l, value in enumerate(values):
                 card = Card(suit, value, numbers[l])
                 self.deck.append(card)
+
+        print(self.deck)
 
 
         # for k, suit in enumerate(suits):         
