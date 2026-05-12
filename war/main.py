@@ -1,4 +1,5 @@
-from utils import Deck, Game, Player
+from game import Card, Deck
 
-d = Deck()
-d.create_deck()
+deck = Deck()
+deck.shuffle()
+print(deck.deal())
